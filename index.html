@@ -1,65 +1,57 @@
 <!DOCTYPE html>
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/spikl.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-  body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  }
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      top: 0;
-      width: 100%;
-      background-color: #444444;
-      text-align: center;
-  }
-
-  li {
-      display: inline-block;
-      padding: 8px;
-      font-family: 'Dosis', sans-serif;
-  }
-
-  li:hover {
-      background-color: #FF6600;
-  }
-
-  a{
-    text-decoration: none;
-    color: white;
-  }
-
-  .active {
-      background-color: #FF6600;
-  }
-
-  .bg-img{
-    height: 100%;
-    width: 100%;
-    background-image: url("images/bg-img.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: #1e1e1e;
-    background-position: center;
-  }
-  </style>
 </head>
 
 <body>
   <ul>
-  <li><a href="default.asp">HOME</a></li>
-  <li><a href="about.html">ABOUT</a></li>
-  <li><a href="contact.asp">MEMBERS</a></li>
-  <li><a href="about.asp">ADVICE</a></li>
+  <a href="index.html"><img class="logo" src="images/logotext.png" width="100px"></a>
+  <a href="index.html"><li>HOME</li></a>
+  <a href="about.html"><li>ABOUT</li></a>
+  <a href="members.html"><li>MEMBERS</li></a>
+  <a href="advice.html"><li>ADVICE</li></a>
 </ul>
 
-<div class="bg-img">
+<div class="bg-top">
+  <left>
+  <div class="semicircle" width="500px"></div>
+  </left>
+  <a href="members.html"<button class="button">Get Started</button></a>
 </div>
 
+<div style="margin: 150px 0 0 0">
+  <p class="aboutspikl" id="about1"> Want to learn/practice a foreign language in a free, convenient and casual way?</p>
+  <p class="aboutspikl" id="about2"><img src="images/step1.png" style="width:32%">  <img src="images/step2.png" style="width:32%">  <img src="images/step3.png" style="width:32%"></p>
+  <p class="aboutspikl" id="about3">SPiKL is an intra-university language exchange platform that connects people who want to do just that.
+    If you want to learn/practice a foreign language and can offer to help someone else learn/practice your native language,
+    then SPiKL is the right platform for you. </p>
+  <br>
+  <p class="aboutspikl" id="about4">Connect with people who want to learn your language in exchange for theirs with three simple steps:</p>
+  <br>
+  <p class="aboutspikl" id="about5">#1 Create a profile<br>
+  #2 Get matched and connect<br>
+  #3 Meet up<br></p>
+  <p class="aboutspikl" id="about6">There is no set syllabus, no set time and no cost. Forget about the time zone differences,
+    the distance and the money. With SPiKL, we bring world languages to you.</p>
+  <br>
+  <p class="aboutspikl" id="about7">So go on - get cultured, go global.</p>
+  <br>
+  <p class="aboutspikl" id="about8">SPiKL was crowdfunded on YuStart: https://yustart.hubbub.net/p/yuspeak-spikl/
+  Thank you to all our sponsors! YOU made the difference.</p>
+</div>
+
+<hr>
+
+<div class="footer">
+  © SPiKL Inc.
+  <i class="fa fa-facebook-square" style="font-size:28px; color:grey; float:right"></i>
+</div>
 
 </body>
