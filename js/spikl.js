@@ -73,3 +73,23 @@ function signIn(){
       return false;
     }
 }
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+/*open notes*/
+function openNotes() {
+    document.getElementById('openNotes').style.display='block';
+}
+
+/*open languages*/
+function openLanguage() {
+    document.getElementById('openLanguage').style.display='block';
+}

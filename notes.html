@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/spikl.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+
+  <ul>
+  <a class="navbar" href="index.html"><img class="logo" src="images/logotext.png" width="100px"></a>
+  <a class="navbar" href="index.html"><li>HOME</li></a>
+  <a class="navbar" href="about.html"><li>ABOUT</li></a>
+  <a class="navbar" href="members.html"><li style="background-color:#ff6600">DASHBOARD</li></a>
+  <a class="navbar" href="advice.html"><li>ADVICE</li></a>
+</ul>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="notes.html">NOTES</a>
+  <a href="#">SCHEDULE</a>
+  <a href="#">CHAT</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span class="opensidebar" onclick="openNav()"> NOTES &#10095;</span>
+
+<div>
+  <table class="noteSelector">
+    <tr>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Useful Pickup Lines</div></td>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle" >How to Order</div></td>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Asking for Directions</div></td>
+    </tr>
+    <tr>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Objects</div></td>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Family Members</div></td>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Music and Movies</div></td>
+    </tr>
+    <tr>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Activities</div></td>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Vacation</div></td>
+      <td style="padding-bottom: 60px"><img class="notes" src="images/note.png" onclick="openNotes()"><div class="noteTitle">Describing People</div></td>
+    </tr>
+  </table>
+</div>
+
+<div id="openNotes" class="modal">
+  <form class="modal-content animate">
+    <span onclick="document.getElementById('openNotes').style.display='none'" class="close" title="Close Modal">×</span>
+    <div class="container">
+      <img src="images/bignotes.png" style="height:700px; align="middle";">
+    </div>
+  </form>
+</div>
+
+</body>
