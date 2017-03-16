@@ -494,3 +494,8 @@ td{
   display:block;
   cursor: pointer;
 }
+
+.facebookEmbed {
+  text-align: center;
+  margin: 100px 0 0 0;
+}
