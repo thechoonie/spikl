@@ -7,16 +7,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/spikl.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta charset="UTF-8">
 </head>
 
 <body>
   <ul>
-  <a href="index.html"><img class="logo" src="images/logotext.png" width="100px"></a>
-  <a href="index.html"><li>HOME</li></a>
-  <a href="about.html"><li>ABOUT</li></a>
-  <a href="members.html"><li>DASHBOARD</li></a>
-  <a href="advice.html"><li>ADVICE</li></a>
+  <a class="navbar" href="index.html"><img class="logo" src="images/logotext.png" width="100px"></a>
+  <a class="navbar" href="index.html"><li>HOME</li></a>
+  <a class="navbar" href="about.html"><li>ABOUT</li></a>
+  <a class="navbar" href="members.html"><li>DASHBOARD</li></a>
+  <a class="navbar" href="advice.html"><li>ADVICE</li></a>
 </ul>
 
 <div class="bg-top">
@@ -27,7 +27,7 @@
 </div>
 
 <div id="id01" class="modal">
-  <form class="modal-content animate" onSubmit="return signIn()">
+  <form class="modal-content animate" action="members.html" onSubmit="return signIn()">
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
     <div class="container">
       <label><b>Email</b></label>
@@ -36,7 +36,7 @@
       <label><b>Password</b></label>
       <input type="password" id="pw" placeholder="Enter Password" required>
 
-      <input type="checkbox" checked="checked" class="rememberMe">    Remember me
+      <input type="checkbox" checked="checked" class="rememberMe"> Remember me
 
       <div class="clearfix">
         <button type="submit" class="signupbtn">Sign In</button>
@@ -59,7 +59,7 @@
       <label><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
       <input type="checkbox" checked="checked"> Remember me
-      <p>By creating an account you agree to our <a class="terms" href="terms.html">Terms & Conditions</a>.</p>
+      <p>By creating an account you agree to our <a class="terms" href="terms.html" target="_blank">Terms & Conditions</a>.</p>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -69,13 +69,17 @@
   </form>
 </div>
 
-<div style="margin: 150px 0 0 0">
+<p id="downarrow"> &#9662; </p>
+<p id="scrollprompt"> Find out More </p>
+
+<div style="margin: 60px 0 0 0">
+
   <p class="aboutspikl" id="about1"> Want to learn/practice a foreign language in a free, convenient and casual way?</p>
-  <p class="aboutspikl" id="about2"><img src="images/step1.png" style="width:32%">  <img src="images/step2.png" style="width:32%">  <img src="images/step3.png" style="width:32%"></p>
+  <p class="aboutspikl" id="about2"><img id="aboutspiklImage1" class="aboutspiklImage1" src="images/step1.png" style="width:32%">  <img id="aboutspiklImage2" class="aboutspiklImage2" src="images/step2.png" style="width:32%">  <img id="aboutspiklImage3" class="aboutspiklImage3" src="images/step3.png" style="width:32%"></p>
   <p class="aboutspikl" id="about3">SPiKL is an intra-university language exchange platform that connects people who want to do just that.
     If you want to learn/practice a foreign language and can offer to help someone else learn/practice your native language,
     then SPiKL is the right platform for you. </p>
-  <br>
+  <!--<br>
   <p class="aboutspikl" id="about4">Connect with people who want to learn your language in exchange for theirs with three simple steps:</p>
   <br>
   <p class="aboutspikl" id="about5">#1 Create a profile<br>
@@ -87,7 +91,38 @@
   <p class="aboutspikl" id="about7">So go on - get cultured, go global.</p>
   <br>
   <p class="aboutspikl" id="about8">SPiKL was crowdfunded on YuStart: https://yustart.hubbub.net/p/yuspeak-spikl/
-  Thank you to all our sponsors! YOU made the difference.</p>
+  Thank you to all our sponsors! YOU made the difference.!-->
+  </p>
+</div>
+
+<div class="testimonials" id="testimonials">
+<h1>Testimonials</h1>
+<br><br>
+<table>
+  <tr>
+    <th><div class="testis marco"></div></th>
+    <th><div class="testis laura"></div></th>
+    <th><div class="testis daniel"></div></th>
+  </tr>
+  <tr>
+    <th><h3>Marco, Germany</h3></th>
+    <th><h3>Laura, UK</h3></th>
+    <th><h3>Daniel, Mexico</h3></th>
+  </tr>
+  <tr>
+    <td>Here I found a language partner who is also studying chemistry.
+      The good thing is that you’re not limited to a course program instead you can go into town, exhibitions or even watch series, you decide!
+      This creates new situations to master with the help of your partner.</td>
+    <td>I wanted to keep up my languages, as I was worried about losing them.
+      Within days I met a language partner who helps me with my German every week, and I help him with his English.
+      I think it's a lovely way to meet new people, whilst also deepening language knowledge in a different way.</td>
+    <td>This is my first time ever in the UK. So, I’m very excited to meet a lot of friends and improve my English!
+      I believe there’s no better way to do so than practising. A lot.
+      Which is why I’m very glad to have joined SPiKL!
+      Through it I have met three friends who want to practice their Spanish
+      and want to help me with my English as well!</td>
+    </tr>
+  </table>
 </div>
 
 <hr>
@@ -95,6 +130,7 @@
 <div class="footer">
   © SPiKL Inc.
   <a href="https://www.facebook.com/spiklxyz/"><i class="fa fa-facebook-square" style="font-size:28px; color:grey; float:right"></i></a>
+  <br><a href="terms.html" target="_blank">Terms and Conditions</a>
 </div>
 
 </body>

@@ -1,3 +1,4 @@
+//scroll animation
 $.fn.isInViewport = function() {
   var i = 0;
   for(i = 0; i<$(this).length; i++){
@@ -17,6 +18,10 @@ $.fn.isInViewport = function() {
 
 $(window).on('resize scroll', function(){
   $('.aboutspikl').isInViewport();
+  $('.aboutspiklImage1').isInViewport();
+  $('.aboutspiklImage2').isInViewport();
+  $('.aboutspiklImage3').isInViewport();
+  $('.testimonials').isInViewport();
 })
 
 // Defining modals
@@ -43,14 +48,24 @@ $(window).on('click', function(event) {
 function getCookie(){
   var x = decodeURIComponent(document.cookie);
   var ca = x.split(';');
-  console.log(ca);
+  var email = "email=";
+  for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 function signIn(){
     if ($('#email').val()=="nadc500@york.ac.uk" && $('#pw').val()=="Password1"){
-      if ($('.rememberMe').is(':checked')){
-          document.cookie = "username=John Doe";
-      }
+      /*if ($('.rememberMe').is(':checked')){
+          document.cookie = "email=" + $('#email').val() + "; pw=" + $('#pw').val() +";";
+      }*/
       modalSignIn.style.display = "none";
       return true;
     }

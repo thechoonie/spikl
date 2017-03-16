@@ -24,9 +24,22 @@ li:hover {
     background-color: #FF6600;
 }
 
-a{
+a.navbar {
   text-decoration: none;
   color: white;
+}
+
+a.navbar:hover {
+  color: white;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ff6600;
 }
 
 .active {
@@ -115,11 +128,32 @@ a{
   }
 }
 
+.termsOfService {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px 250px 0px 250px;
+}
+
+#downarrow {
+  margin: 0px 250px 0px 250px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: #ff6600;
+}
+
+#scrollprompt {
+  margin: 0px 250px 0px 250px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
 .aboutspikl {
   margin: 0px 250px 50px 250px;
   font-family: 'Quicksand', sans-serif;
   font-size: 35px;
   opacity: 0;
+  text-align: center;
 }
 
 .aboutspikl.start{
@@ -131,6 +165,33 @@ a{
 @-webkit-keyframes eighty {
     0%   {opacity: 0}
     100% {opacity : 100;}
+}
+
+.aboutspiklImage1{
+  opacity: 0;
+}
+
+.aboutspiklImage1.start{
+  -webkit-animation: eighty 2s ease-out forwards;
+  -webkit-animation-delay: 0.2s;
+}
+
+.aboutspiklImage2{
+  opacity: 0;
+}
+
+.aboutspiklImage2.start{
+  -webkit-animation: eighty 2s ease-out forwards;
+  -webkit-animation-delay: 0.4s;
+}
+
+.aboutspiklImage3{
+  opacity: 0;
+}
+
+.aboutspiklImage3.start{
+  -webkit-animation: eighty 2s ease-out forwards;
+  -webkit-animation-delay: 0.6s;
 }
 
 .footer{
@@ -148,9 +209,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-.rememberMe {
-  margin: 10px 0;
-}
 
 .notMember {
   width:25%;
@@ -178,7 +236,7 @@ input[type=text], input[type=password] {
 /* Add padding to container elements */
 .container {
     padding: 16px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* The Modal (background) */
@@ -217,7 +275,7 @@ input[type=text], input[type=password] {
 
 .close:hover,
 .close:focus {
-    color: red;
+    color: #ff6600;
     cursor: pointer;
 }
 
@@ -226,19 +284,57 @@ input[type=text], input[type=password] {
   text-align: center;
 }
 
-
-.terms{
-  color:black;
-  text-decoration: underline;
-}
-
-.terms:hover{
-  color: #ff6600;
-}
-
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
     .signupbtn {
        width: 100%;
     }
+}
+
+.testimonials {
+  margin: 0px 100px 50px 100px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  opacity: 0;
+}
+
+.testimonials.start{
+  -webkit-animation: eighty 2s ease-out forwards;
+  -webkit-animation-delay: 0.2s;
+}
+
+.testis {
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: auto;
+}
+
+table{
+  width: 100%;
+}
+
+th{
+  width: 210px;
+}
+
+td{
+  width: 210px;
+  padding: 0 20px 0 20px;
+  vertical-align: top;
+}
+
+.testis.marco{
+  background-image: url("../images/marco.jpg");
+}
+
+.testis.laura{
+  background-image: url("../images/laura.jpeg");
+}
+
+.testis.daniel{
+  background-image: url("../images/daniel.jpg");
 }
