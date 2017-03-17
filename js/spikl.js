@@ -111,8 +111,14 @@ function openLanguage() {
     document.getElementById('openLanguage').style.display='block';
 }
 
-function spiklEvent(){
+/*function spiklEvent(){
   FB.api('/spiklxyz/events', function(response) {
     console.log(response);
   });
-}
+}*/
+
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    var accessToken = response.authResponse.accessToken;
+  }
+} );
