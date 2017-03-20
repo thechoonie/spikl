@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '1119143194877722',
@@ -17,8 +17,7 @@ window.fbAsyncInit = function() {
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
 
-=======
->>>>>>> Stashed changes
+
 //scroll animation
 $.fn.isInViewport = function() {
   var i = 0;
@@ -114,7 +113,6 @@ function openNotes() {
 function openLanguage() {
     document.getElementById('openLanguage').style.display='block';
 }
-<<<<<<< Updated upstream
 
 function getFbEvents(){
  	$.ajax({
@@ -139,5 +137,3 @@ function getFbEvents(){
               }
           });
 }
-=======
->>>>>>> Stashed changes
