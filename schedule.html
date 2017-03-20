@@ -7,7 +7,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/spikl.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+	$.ajax({
+              type: "GET",
+              url: 'fb.php',
+              data : {"functionName": "getData"},
+              success: function(response) {
+                        var fbResp = JSON.parse(response);
+                        var eventsArray = fbResp["data"];
+                        var eventId = eventsArray[0]["id"];
+                        $.ajax({
+                                type: "GET",
+                                url: 'fb.php',
+                                data: {"functionName" : "getPic", "picId" : eventId},
+                                success: function(response){
+                                        var somin = JSON.parse(response);
+                                        $('#notesPic')[0].src = somin["cover"]["source"];
+                                        console.log(somin["cover"]);
+                                }
+                                });
 
+              }
+          });
+</script>
 </head>
 
 <body>
@@ -31,10 +53,10 @@
 <!-- Use any element to open the sidenav -->
 <span class="opensidebar" onclick="openNav()">SCHEDULE &#10095;</span>
 
-<div class="facebookEmbed">
+<!--<div class="facebookEmbed">
 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fspiklxyz%2Fposts%2F1480762351954227&width=500" width="500" height="446" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" style="text-align:center"></iframe>
-</div>
-
+</div>!-->
+<img id="notesPic">
 <div class="footer">
   © SPiKL Inc.
   <a href="https://www.facebook.com/spiklxyz/"><i class="fa fa-facebook-square" style="font-size:28px; color:grey; float:right"></i></a>

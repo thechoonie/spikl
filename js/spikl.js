@@ -7,6 +7,7 @@ window.fbAsyncInit = function() {
   FB.AppEvents.logPageView();
 };
 
+
 (function(d, s, id){
    var js, fjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) {return;}
@@ -111,14 +112,26 @@ function openLanguage() {
     document.getElementById('openLanguage').style.display='block';
 }
 
-/*function spiklEvent(){
-  FB.api('/spiklxyz/events', function(response) {
-    console.log(response);
-  });
-}*/
+function getFbEvents(){
+ 	$.ajax({
+              type: "GET",
+              url: 'fb.php',
+	      data : {"functionName": "getData"},
+              success: function(response) {
+			var fbResp = JSON.parse(response);
+                    	var eventsArray = fbResp["data"];
+			var eventId = eventsArray[0]["id"];
+			$.ajax({
+				type: "GET",
+				url: 'fb.php',
+				data: {"functionName" : "getPic", "picId" : eventId},
+				success: function(response){
+					var somin = JSON.parse(response);
+					$('#notesPic')[0].src = somin["cover"]["source"];
+					console.log(somin["cover"]);
+				}
+				});
 
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    var accessToken = response.authResponse.accessToken;
-  }
-} );
+              }
+          });
+}
