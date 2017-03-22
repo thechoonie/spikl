@@ -131,7 +131,7 @@ function getFbEvents(){
           				success: function(response){
           					var somin = JSON.parse(response);
           					$('#notesPic')[0].src = somin["cover"]["source"];
-                    $('#notesPic2')[1].src = somin["cover"]["source"];
+                    $('#notesPic2')[0].src = somin["cover"]["source"];
           					console.log(somin["cover"]);
           				}
           				});
