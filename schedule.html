@@ -9,13 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
 	<script>
-  $('#right-button').on('click', function() {
-     console.log("hi");
-  });
 
-  var pics = [];
-
-var cafeCrawl = {
+var cafeCrawl = {"eventData" : {
     "description": "SPiKL CAFE CRAWL: Gatehouse Coffee! Hi everyone! Made an event page so that this is easier to save in calendars, etc. We love burning our tongues on hot drinks as much as we like tripping our tongues over tough tongue twisterz, yo. So, grab a friend, come along, and have a chat with SPiKL at Gatehouse Coffee! DATE: 16th February (Thursday, W6) TIME: 4-6pm MEETING PLACE: Market Square at 3.45 or meet us there!",
     "end_time": "2017-02-16T18:30:00+0000",
     "name": "SPiKL at Gatehouse Coffee",
@@ -32,8 +27,29 @@ var cafeCrawl = {
       "id": "155736981308"
     },
     "start_time": "2017-02-16T15:30:00+0000",
-    "id": "643118339205167"
+    "id": "643118339205167"},
+    "eventPic" : "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/16715987_1466447403385722_684004933376008482_o.jpg?oh=3599e5d0393775ec7ddaa46d019d72a4&oe=5957074A"
   }
+
+$(document).ready(function(){
+    for(var i in $('.thing')){
+        $('.thing')[i].src = cafeCrawl["eventPic"];
+    }
+
+    $('.thing').on('click', function(){
+      var id = $(this)[0].id;
+      var index = Number(id.substring(8));
+      console.log(index);
+      var date = new Date(events[index]["eventData"]["start_time"]);
+      $("#eventName")[0].innerHTML = events[index]["eventData"]["name"];
+      $("#eventPlace")[0].innerHTML = events[index]["eventData"]["place"]["name"];
+      $("#eventTime")[0].innerHTML = date.getHours() + ":" + date.getMinutes();
+      $("#eventDescription")[0].innerHTML = events[index]["eventData"]["description"];
+    })
+
+})
+
+var events = [];
 
 	$.ajax({
               type: "GET",
@@ -46,7 +62,8 @@ var cafeCrawl = {
 				var eventData = fbResp[event]["eventData"];
 				var id = '#notesPic' + event;
 				$(id)[0].src = eventPic;
-				if(event > 10){
+        events.push(fbResp[event]);
+      	if(event > 10){
 					break;
 				}
 			}
@@ -56,7 +73,6 @@ var cafeCrawl = {
 </head>
 
 <body>
-
 
   <ul>
   <a class="navbar" href="index.html"><img class="logo" src="images/logotext.png" width="100px"></a>
@@ -80,6 +96,7 @@ var cafeCrawl = {
 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fspiklxyz%2Fposts%2F1480762351954227&width=500" width="500" height="446" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" style="text-align:center"></iframe>
 </div>!-->
 
+<div id="main">
 <div id="upcomingEvents">
     <table class="eventsTable">
       <tr>
@@ -103,7 +120,19 @@ var cafeCrawl = {
     </table>
 </div>
 
+<div class="eventDetails">
+    <p id="eventName">
+    <p id="eventPlace">
+    <p id="eventTime">
+    <p id="eventDescription">
+</div>
+
+</div>
+
 <br><br><br><br><br><br><br>
+
+<hr>
+
 <div class="footer">
 © SPiKL Inc.
   <a href="https://www.facebook.com/spiklxyz/"><i class="fa fa-facebook-square" style="font-size:28px; color:grey; float:right"></i></a>

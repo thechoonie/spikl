@@ -47,11 +47,12 @@ $(window).on('resize scroll', function(){
 // Defining modals
 var modalSignIn
 var modalSignUp
-
+var sideBar
 // Get the modal
 $(document).ready(function(){
   modalSignIn = document.getElementById('id01');
   modalSignUp = document.getElementById('id02');
+  sideBar = document.getElementById('mySidenav');
 });
 
 
@@ -62,6 +63,18 @@ $(window).on('click', function(event) {
     }
     if (event.target == modalSignUp) {
         modalSignUp.style.display = "none";
+    }
+    if (event.target == modalSignUp) {
+        modalSignUp.style.display = "none";
+    }
+
+    if (event.target != sideBar) {
+      if(barOut && delayDone){
+        closeNav2();
+      }
+      else{
+        delayDone = true;
+      }
     }
 });
 
@@ -93,15 +106,32 @@ function signIn(){
       return false;
     }
 }
-
+var barOut = false;
+var delayDone = false;
 /* Set the width of the side navigation to 250px */
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
+    barOut = true;
+    delayDone = false;
+
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
+  if(barOut){
     document.getElementById("mySidenav").style.width = "0";
+    barOut = true;
+    delayDone = true;
+  }
+}
+
+function closeNav2(){
+  if(barOut){
+    document.getElementById("mySidenav").style.width = "0";
+    barOut = false;
+    delayDone = false;
+  }
 }
 
 /*open notes*/

@@ -509,6 +509,7 @@ td{
   object-fit: cover;
   height: 100px;
   width: 100px;
+  cursor: pointer;
 }
 
 .eventScroll{
@@ -526,17 +527,35 @@ td{
 }
 
 .eventsTableArrow{
-  width: 50px;
+  width: 100px;
+  padding: 0;
+  text-align: center;
 }
 
 .eventsTableData{
   overflow-x: hidden;
   width: 400px;
+  padding: 0;
+}
+
+#main {
+  margin: 50px 300px 50px 400px;
+}
+
+.eventDetails {
+  border-style: solid;
+  border-width: thin;
+  border-color: #dddddd;
+  border-radius: 5px;
+  padding: 20px 20px 20px 20px;
+  margin: 10px 100px 0 100px;
+  text-align: justify;
+  width: 365px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #upcomingEvents {
   white-space: nowrap;
-  position: fixed;
   left: 25%;
   right: 25%;
 }
