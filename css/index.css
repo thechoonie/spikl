@@ -520,6 +520,7 @@ td{
 
 .eventsTable{
   width: 100%;
+  table-layout:fixed;
 }
 
 .eventsTableArrow{
@@ -540,5 +541,4 @@ td{
 
 #content{
   overflow-x: hidden;
-  width: 400px;
 }
