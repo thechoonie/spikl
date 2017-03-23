@@ -506,6 +506,7 @@ td{
 }
 
 .thing {
+  object-fit: cover;
   width: 100px;
 }
 
