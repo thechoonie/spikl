@@ -579,19 +579,3 @@ td{
 #content{
   overflow-x: hidden;
 }
-
-.add {
-  width:30%;
-  background-color: #ff6600;
-  color: white;
-  padding: 14px 20px;
-  margin: 30px 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Quicksand', sans-serif;
-}
-
-.add:focus{
-  outline:0;
-}
