@@ -36,14 +36,69 @@ $(document).ready(function(){
         $('.thing')[i].src = cafeCrawl["eventPic"];
     }
 
+    /*$('.thing').on('click', function(){
+      var id = $(this)[0].id;
+      var index = Number(id.substring(8));
+      var date = new Date(cafeCrawl["eventData"]["start_time"]);
+      var weekday = new Array(7);
+          weekday[0] =  "Sunday";
+          weekday[1] = "Monday";
+          weekday[2] = "Tuesday";
+          weekday[3] = "Wednesday";
+          weekday[4] = "Thursday";
+          weekday[5] = "Friday";
+          weekday[6] = "Saturday";
+        var n = weekday[date.getDay()];
+      var month = new Array(12);
+          month[0] =  "Jan";
+          month[1] =  "Feb";
+          month[2] =  "March";
+          month[3] =  "April";
+          month[4] =  "May";
+          month[5] =  "June";
+          month[6] =  "July";
+          month[7] =  "Aug";
+          month[8] =  "Sept";
+          month[9] =  "Oct";
+          month[10] =  "Nov";
+          month[11] =  "Dec";
+        var m = month[date.getMonth()];
+      $("#eventName")[0].innerHTML = cafeCrawl["eventData"]["name"];
+      $("#eventPlace")[0].innerHTML = cafeCrawl["eventData"]["place"]["name"];
+      $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + date.getMinutes();
+      $("#eventDescription")[0].innerHTML = cafeCrawl["eventData"]["description"];
+    })*/
+
     $('.thing').on('click', function(){
       var id = $(this)[0].id;
       var index = Number(id.substring(8));
-      console.log(index);
       var date = new Date(events[index]["eventData"]["start_time"]);
+      var weekday = new Array(7);
+          weekday[0] =  "Sunday";
+          weekday[1] = "Monday";
+          weekday[2] = "Tuesday";
+          weekday[3] = "Wednesday";
+          weekday[4] = "Thursday";
+          weekday[5] = "Friday";
+          weekday[6] = "Saturday";
+        var n = weekday[date.getDay()];
+      var month = new Array(12);
+          month[0] =  "Jan";
+          month[1] =  "Feb";
+          month[2] =  "March";
+          month[3] =  "April";
+          month[4] =  "May";
+          month[5] =  "June";
+          month[6] =  "July";
+          month[7] =  "Aug";
+          month[8] =  "Sept";
+          month[9] =  "Oct";
+          month[10] =  "Nov";
+          month[11] =  "Dec";
+        var m = month[date.getMonth()];
       $("#eventName")[0].innerHTML = events[index]["eventData"]["name"];
       $("#eventPlace")[0].innerHTML = events[index]["eventData"]["place"]["name"];
-      $("#eventTime")[0].innerHTML = date.getHours() + ":" + date.getMinutes();
+      $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + date.getMinutes();
       $("#eventDescription")[0].innerHTML = events[index]["eventData"]["description"];
     })
 
@@ -120,8 +175,9 @@ var events = [];
     </table>
 </div>
 
-<div class="eventDetails">
-    <p id="eventName">
+<div class="eventDetails" style="text-align: center;">
+    <p>Click on any event to see more details.</p>
+    <h3><p id="eventName"></h3>
     <p id="eventPlace">
     <p id="eventTime">
     <p id="eventDescription">

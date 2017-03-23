@@ -534,7 +534,7 @@ td{
 
 .eventsTableData{
   overflow-x: hidden;
-  width: 400px;
+  width: 600px;
   padding: 0;
 }
 
@@ -550,8 +550,12 @@ td{
   padding: 20px 20px 20px 20px;
   margin: 10px 100px 0 100px;
   text-align: justify;
-  width: 365px;
+  width: 565px;
   font-family: 'Quicksand', sans-serif;
+}
+
+.eventName {
+  font-weight: bold;
 }
 
 #upcomingEvents {
