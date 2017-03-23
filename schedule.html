@@ -40,6 +40,13 @@ $(document).ready(function(){
       var id = $(this)[0].id;
       var index = Number(id.substring(8));
       var date = new Date(cafeCrawl["eventData"]["start_time"]);
+      function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+      var minutes = addZero (date.getMinutes());
       var weekday = new Array(7);
           weekday[0] =  "Sunday";
           weekday[1] = "Monday";
@@ -65,7 +72,7 @@ $(document).ready(function(){
         var m = month[date.getMonth()];
       $("#eventName")[0].innerHTML = cafeCrawl["eventData"]["name"];
       $("#eventPlace")[0].innerHTML = cafeCrawl["eventData"]["place"]["name"];
-      $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + date.getMinutes();
+      $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + minutes;
       $("#eventDescription")[0].innerHTML = cafeCrawl["eventData"]["description"];
     })*/
 
@@ -73,6 +80,13 @@ $(document).ready(function(){
       var id = $(this)[0].id;
       var index = Number(id.substring(8));
       var date = new Date(events[index]["eventData"]["start_time"]);
+          function addZero(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+      var minutes = addZero (date.getMinutes());
       var weekday = new Array(7);
           weekday[0] =  "Sunday";
           weekday[1] = "Monday";
@@ -98,7 +112,7 @@ $(document).ready(function(){
         var m = month[date.getMonth()];
       $("#eventName")[0].innerHTML = events[index]["eventData"]["name"];
       $("#eventPlace")[0].innerHTML = events[index]["eventData"]["place"]["name"];
-      $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + date.getMinutes();
+      $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + minutes;
       $("#eventDescription")[0].innerHTML = events[index]["eventData"]["description"];
     })
 
