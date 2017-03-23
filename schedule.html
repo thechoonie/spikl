@@ -79,7 +79,6 @@ $(document).ready(function(){
 
     $('.thing').on('click', function(){
       var id = $(this)[0].id;
-      console.log("hi");
       var index = Number(id.substring(8));
       var date = new Date(events[index]["eventData"]["start_time"]);
           function addZero(i) {
@@ -197,6 +196,9 @@ var events = [];
     <p id="eventPlace">
     <p id="eventTime">
     <p id="eventDescription">
+    <br>
+    <br>
+    <button class="add">Add to Schedule</button>
 </div>
 
 </div>
