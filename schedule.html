@@ -7,7 +7,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/spikl.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
 	<script>
+  $('#right-button').on('click', function() {
+     console.log("hi");
+  });
+
+  var pics = [];
+
+var cafeCrawl = {
+    "description": "SPiKL CAFE CRAWL: Gatehouse Coffee! Hi everyone! Made an event page so that this is easier to save in calendars, etc. We love burning our tongues on hot drinks as much as we like tripping our tongues over tough tongue twisterz, yo. So, grab a friend, come along, and have a chat with SPiKL at Gatehouse Coffee! DATE: 16th February (Thursday, W6) TIME: 4-6pm MEETING PLACE: Market Square at 3.45 or meet us there!",
+    "end_time": "2017-02-16T18:30:00+0000",
+    "name": "SPiKL at Gatehouse Coffee",
+    "place": {
+      "name": "Gatehouse Coffee",
+      "location": {
+        "city": "York",
+        "country": "United Kingdom",
+        "latitude": 53.955350874421,
+        "longitude": -1.0711159320333,
+        "street": "Walmgate Bar",
+        "zip": "YO1 9UB"
+      },
+      "id": "155736981308"
+    },
+    "start_time": "2017-02-16T15:30:00+0000",
+    "id": "643118339205167"
+  }
+
 	$.ajax({
               type: "GET",
               url: 'fb.php',
@@ -52,12 +79,34 @@
 <!--<div class="facebookEmbed">
 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fspiklxyz%2Fposts%2F1480762351954227&width=500" width="500" height="446" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" style="text-align:center"></iframe>
 </div>!-->
-<img src="" id="notesPic0">
-<img id="notesPic1"><img id="notesPic2">
-<img id="notesPic3"><img id="notesPic4">
+
+<div id="upcomingEvents">
+    <table class="eventsTable">
+      <tr>
+        <td class="eventsTableArrow"><a href="#" onclick="goLeft()" class="eventScroll" id="left-button">&#10094;</a></td>
+            <td class="eventsTableData"><div id="content">
+                <img class="thing" src="images/step1.png"/>
+                <img class="thing" src="images/step1.png"/>
+                <img class="thing" src="images/step1.png"/>
+                <img class="thing" src="images/step1.png"/>
+                <img class="thing" src="images/step1.png"/>
+                <img class="thing" src="images/step1.png"/>
+            </div></td>
+        <td class="eventsTableArrow"><a href="#" onclick="goRight()" class="eventScroll" id="right-button">&#10095;</a></td>
+      </tr>
+    </table>
+</div>
+
+<img id="notesPic0">
+<img id="notesPic1">
+<img id="notesPic2">
+<img id="notesPic3">
+<img id="notesPic4">
 <img id="notesPic5">
+
+<br><br><br><br><br><br><br>
 <div class="footer">
-  © SPiKL Inc.
+© SPiKL Inc.
   <a href="https://www.facebook.com/spiklxyz/"><i class="fa fa-facebook-square" style="font-size:28px; color:grey; float:right"></i></a>
   <br><a href="terms.html" target="_blank">Terms and Conditions</a>
 </div>

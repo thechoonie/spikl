@@ -182,15 +182,15 @@ a:hover {
   text-align: center;
 }
 
+@-webkit-keyframes eighty {
+    0%   {opacity: 0}
+    100% {opacity : 100;}
+}
+
 .aboutspikl.start{
   -webkit-animation: eighty 2s ease-out forwards;
   -webkit-animation-delay: 0.2s;
 
-}
-
-@-webkit-keyframes eighty {
-    0%   {opacity: 0}
-    100% {opacity : 100;}
 }
 
 .aboutspiklImage1{
@@ -477,6 +477,11 @@ td{
   text-align: center;
 }
 
+.aboutMe{
+  margin: 0px 300px 50px 300px;
+  text-align: center;
+}
+
 .languages{
   text-align:center;
   background-color:#999999;
@@ -498,4 +503,42 @@ td{
 .facebookEmbed {
   text-align: center;
   margin: 100px 0 0 0;
+}
+
+.thing {
+  width: 100px;
+}
+
+.eventScroll{
+  font-size: 70px;
+  text-decoration: none;
+}
+
+.eventScroll:hover{
+  color: #ff6600;
+}
+
+.eventsTable{
+  width: 100%;
+}
+
+.eventsTableArrow{
+  width: 50px;
+}
+
+.eventsTableData{
+  overflow-x: hidden;
+  width: 400px;
+}
+
+#upcomingEvents {
+  white-space: nowrap;
+  position: fixed;
+  left: 25%;
+  right: 25%;
+}
+
+#content{
+  overflow-x: hidden;
+  width: 400px;
 }

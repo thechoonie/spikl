@@ -114,28 +114,16 @@ function openLanguage() {
     document.getElementById('openLanguage').style.display='block';
 }
 
-function getFbEvents(){
- 	$.ajax({
-              type: "GET",
-              url: 'fb.php',
-	            data : {"functionName": "getData"},
-              success: function(response) {
-  			        var fbResp = JSON.parse(response);
-                var eventsArray = fbResp["data"];
-          			var eventId = eventsArray[0]["id"];
+function goRight() {
+   event.preventDefault();
+   $('#content').animate({
+     marginLeft: "-=200px"
+   }, "fast");
+}
 
-          			$.ajax({
-          				type: "GET",
-          				url: 'fb.php',
-          				data: {"functionName" : "getPic", "picId" : eventId},
-          				success: function(response){
-          					var somin = JSON.parse(response);
-          					$('#notesPic')[0].src = somin["cover"]["source"];
-                    $('#notesPic2')[0].src = somin["cover"]["source"];
-          					console.log(somin["cover"]);
-          				}
-          				});
-
-              }
-          });
+function goLeft() {
+   event.preventDefault();
+   $('#content').animate({
+     marginLeft: "+=200px"
+   }, "fast");
 }
