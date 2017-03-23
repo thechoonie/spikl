@@ -115,6 +115,7 @@ $(document).ready(function(){
       $("#eventPlace")[0].innerHTML = events[index]["eventData"]["place"]["name"];
       $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + minutes;
       $("#eventDescription")[0].innerHTML = events[index]["eventData"]["description"];
+      $("#add") = "Add to Schedule";
     })
 
 })
@@ -198,7 +199,7 @@ var events = [];
     <p id="eventDescription">
     <br>
     <br>
-    <button class="add">Add to Schedule</button>
+    <p id="add">
 </div>
 
 </div>
