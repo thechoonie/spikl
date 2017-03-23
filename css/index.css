@@ -125,6 +125,10 @@ a:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.button:focus{
+  outline:0;
+}
+
 @media only screen and (max-width: 1026px) {
   .semicircle {
     display: none;
@@ -247,6 +251,10 @@ input[type=text], input[type=password] {
   cursor: pointer;
 }
 
+.notMember:focus{
+  outline:0;
+}
+
 /* Float cancel and signup buttons and add an equal width */
 .signupbtn {
   width:50%;
@@ -257,6 +265,10 @@ input[type=text], input[type=password] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.signupbtn:focus{
+  outline:0;
 }
 
 /* Add padding to container elements */
@@ -566,4 +578,20 @@ td{
 
 #content{
   overflow-x: hidden;
+}
+
+.add {
+  width:30%;
+  background-color: #ff6600;
+  color: white;
+  padding: 14px 20px;
+  margin: 30px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.add:focus{
+  outline:0;
 }
