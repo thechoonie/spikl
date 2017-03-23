@@ -114,16 +114,25 @@ function openLanguage() {
     document.getElementById('openLanguage').style.display='block';
 }
 
+var eventsPosition = 0;
+
 function goRight() {
+   var width = ($('.thing').length -2) * $('.thing')[0].offsetWidth;
    event.preventDefault();
-   $('#content').animate({
-     marginLeft: "-=200px"
-   }, "fast");
+   if(eventsPosition < width){
+     eventsPosition += 200;
+     $('#content').animate({
+       marginLeft: "-=200px"
+     }, "fast");
+ }
 }
 
 function goLeft() {
    event.preventDefault();
-   $('#content').animate({
-     marginLeft: "+=200px"
-   }, "fast");
+   if(eventsPosition > 0){
+     eventsPosition -= 200;
+     $('#content').animate({
+       marginLeft: "+=200px"
+     }, "fast");
+ }
 }
