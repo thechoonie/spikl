@@ -127,17 +127,17 @@ var events = [];
               data : {"functionName": "getData"},
               success: function(response) {
 	                var fbResp = JSON.parse(response);
-			for(var event in fbResp){
-				var eventPic = fbResp[event]["eventPic"];
-				var eventData = fbResp[event]["eventData"];
-				var id = '#notesPic' + event;
-				$(id)[0].src = eventPic;
-        events.push(fbResp[event]);
-      	if(event > 10){
-					break;
-				}
-			}
-              }
+              			for(var event in fbResp){
+              				var eventPic = fbResp[event]["eventPic"];
+              				var eventData = fbResp[event]["eventData"];
+              				var id = '#notesPic' + event;
+              				$(id)[0].src = eventPic;
+                      events.push(fbResp[event]);
+                        	if(event > 10){
+                  					break;
+                  				}
+              			  }
+                }
           });
 </script>
 </head>
