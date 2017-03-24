@@ -580,6 +580,14 @@ td{
   overflow-x: hidden;
 }
 
+.addEvent {
+  display: none;
+}
+
+.addEvent.active {
+  display: block;
+}
+
 #add{
   width:30%;
   background-color: #ff6600;
@@ -589,6 +597,7 @@ td{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: auto;
 }
 
 #add:focus{

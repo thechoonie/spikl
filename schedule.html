@@ -10,7 +10,7 @@
   <meta charset="utf-8">
 	<script>
 
-/*var cafeCrawl = {"eventData" : {
+var cafeCrawl = {"eventData" : {
     "description": "SPiKL CAFE CRAWL: Gatehouse Coffee! Hi everyone! Made an event page so that this is easier to save in calendars, etc. We love burning our tongues on hot drinks as much as we like tripping our tongues over tough tongue twisterz, yo. So, grab a friend, come along, and have a chat with SPiKL at Gatehouse Coffee! DATE: 16th February (Thursday, W6) TIME: 4-6pm MEETING PLACE: Market Square at 3.45 or meet us there!",
     "end_time": "2017-02-16T18:30:00+0000",
     "name": "SPiKL at Gatehouse Coffee",
@@ -29,15 +29,15 @@
     "start_time": "2017-02-16T15:30:00+0000",
     "id": "643118339205167"},
     "eventPic" : "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/16715987_1466447403385722_684004933376008482_o.jpg?oh=3599e5d0393775ec7ddaa46d019d72a4&oe=5957074A"
-  }*/
+  }
 
 $(document).ready(function(){
 
     /*for(var i in $('.thing')){
         $('.thing')[i].src = cafeCrawl["eventPic"];
-    }*/
+    }
 
-    /*$('.thing').on('click', function(){
+    $('.thing').on('click', function(){
       var id = $(this)[0].id;
       var index = Number(id.substring(8));
       var date = new Date(cafeCrawl["eventData"]["start_time"]);
@@ -75,6 +75,10 @@ $(document).ready(function(){
       $("#eventPlace")[0].innerHTML = cafeCrawl["eventData"]["place"]["name"];
       $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + minutes;
       $("#eventDescription")[0].innerHTML = cafeCrawl["eventData"]["description"];
+      //$("#add").innerHTML = "Add to Schedule";
+      if (!$(".addEvent").hasClass("active")){
+      $(".addEvent").toggleClass("active");
+      }
     })*/
 
     $('.thing').on('click', function(){
@@ -116,6 +120,9 @@ $(document).ready(function(){
       $("#eventTime")[0].innerHTML = date.getDate() + " " + m + ", " + n + " at " + date.getHours() + ":" + minutes;
       $("#eventDescription")[0].innerHTML = events[index]["eventData"]["description"];
       $("#add").innerHTML = "Add to Schedule";
+      if (!$(".addEvent").hasClass("active")){
+      $(".addEvent").toggleClass("active");
+      }
     })
 
 })
@@ -193,13 +200,13 @@ var events = [];
 
 <div class="eventDetails" style="text-align: center;">
     <p>Click on any event to see more details.</p>
-    <h3><p id="eventName"></h3>
-    <p id="eventPlace">
-    <p id="eventTime">
-    <p id="eventDescription">
+    <h3><p id="eventName"></p></h3>
+    <p id="eventPlace"></p>
+    <p id="eventTime"></p>
+    <p id="eventDescription"></p>
     <br>
     <br>
-    <p id="add">
+    <button class="addEvent" id="add">Add to Schedule</button>
 </div>
 
 </div>
