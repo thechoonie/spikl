@@ -250,26 +250,4 @@ function goLeft(){
   event.preventDefault();
   var content = document.getElementById('content');
   content.scrollLeft -= 100;
-  console.log('hey');
-}
-
-var eventsposition = 0;
-
-function goLeftContinuous(){
-
-  event.preventDefault();
-  var content = document.getElementById('content');
-  while(content.scrollLeft >0){
-    //eventsposition += 100;
-    console.log('hey');
-
-    content.scrollLeft -= 1;}
-}
-
-
-function lefty(){
-  console.log("heheh");
-  if(mouseDown && content.scrollLeft >0){
-    content.scrollLeft -=100;
-  }
 }
