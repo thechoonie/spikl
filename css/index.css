@@ -542,6 +542,7 @@ td{
   width: 100px;
   padding: 0;
   text-align: center;
+  vertical-align: middle;
 }
 
 .eventsTableData{
@@ -602,4 +603,18 @@ td{
 
 #add:focus{
   outline:0;
+}
+
+#mySchedule {
+  white-space: nowrap;
+  left: 25%;
+  right: 25%;
+}
+
+.myEvent {
+  height: 300px;
+  width: 200px;
+  background-color: #999999;
+  display: inline-block;
+  margin-right: 10px;
 }
