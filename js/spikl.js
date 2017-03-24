@@ -166,3 +166,26 @@ function goLeft() {
      }, "fast");
  }
 }
+
+var eventsPosition = 0;
+
+function scheduleGoRight() {
+   var width = ($('.myEvent').length -2) * $('.myEvent')[0].offsetWidth;
+   event.preventDefault();
+   if(eventsPosition < width){
+     eventsPosition += 200;
+     $('#allMyEvents').animate({
+       marginLeft: "-=200px"
+     }, "fast");
+ }
+}
+
+function scheduleGoLeft() {
+   event.preventDefault();
+   if(eventsPosition > 0){
+     eventsPosition -= 200;
+     $('#allMyEvents').animate({
+       marginLeft: "+=200px"
+     }, "fast");
+ }
+}
