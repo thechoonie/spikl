@@ -53,6 +53,41 @@ $(document).ready(function(){
   modalSignIn = document.getElementById('id01');
   modalSignUp = document.getElementById('id02');
   sideBar = document.getElementById('mySidenav');
+
+  var mouseRDown = false;
+  var mouseLDown = false;
+
+  $('#left-button-bottom').on('mousedown', function() {
+      mouseLDown= true;
+      var interval = setInterval(function(){
+        if(mouseLDown && content.scrollLeft >0){
+          content.scrollLeft -=10;
+        }
+        else{
+          clearInterval(interval);
+        }
+      }, 10);
+
+  }).on('mouseup mouseleave', function() {
+      mouseLDown = false;
+  });
+
+  $('#right-button-bottom').on('mousedown', function() {
+      mouseRDown= true;
+      var interval = setInterval(function(){
+        if(mouseRDown && content.scrollLeft <1000){
+          content.scrollLeft +=10;
+        }
+        else{
+          clearInterval(interval);
+        }
+      }, 10);
+
+  }).on('mouseup mouseleave', function() {
+      mouseRDown = false;
+
+  });
+
 });
 
 
@@ -144,7 +179,7 @@ function openLanguage() {
     document.getElementById('openLanguage').style.display='block';
 }
 
-var eventsPosition = 0;
+/*var eventsPosition = 0;
 
 function goRight() {
    var width = ($('.thing').length -2) * $('.thing')[0].offsetWidth;
@@ -165,9 +200,9 @@ function goLeft() {
        marginLeft: "+=200px"
      }, "fast");
  }
-}
+}*/
 
-var eventsPosition = 0;
+/*var eventsPosition = 0;
 
 function scheduleGoRight() {
    var width = ($('.myEvent').length -2) * $('.myEvent')[0].offsetWidth;
@@ -188,4 +223,53 @@ function scheduleGoLeft() {
        marginLeft: "+=200px"
      }, "fast");
  }
+}*/
+
+function scheduleGoRight(){
+  event.preventDefault();
+  var allMyEvents = document.getElementById('allMyEvents');
+  allMyEvents.scrollLeft += 100;
+  console.log('hey');
+}
+
+function scheduleGoLeft(){
+  event.preventDefault();
+  var allMyEvents = document.getElementById('allMyEvents');
+  allMyEvents.scrollLeft -= 100;
+  console.log('hey');
+}
+
+function goRight(){
+  event.preventDefault();
+  var content = document.getElementById('content');
+  content.scrollLeft += 100;
+  console.log('hey');
+}
+
+function goLeft(){
+  event.preventDefault();
+  var content = document.getElementById('content');
+  content.scrollLeft -= 100;
+  console.log('hey');
+}
+
+var eventsposition = 0;
+
+function goLeftContinuous(){
+
+  event.preventDefault();
+  var content = document.getElementById('content');
+  while(content.scrollLeft >0){
+    //eventsposition += 100;
+    console.log('hey');
+
+    content.scrollLeft -= 1;}
+}
+
+
+function lefty(){
+  console.log("heheh");
+  if(mouseDown && content.scrollLeft >0){
+    content.scrollLeft -=100;
+  }
 }

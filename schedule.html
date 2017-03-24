@@ -98,6 +98,9 @@ $(document).ready(function(){
       }
     })*/
 
+
+
+
     $('.thing').on('click', function(){
       var id = $(this)[0].id;
       var index = Number(id.substring(8));
@@ -201,7 +204,8 @@ var events = [];
     <table class="eventsTable">
       <tr>
         <td class="eventsTableArrow"><a href="#" onclick="scheduleGoLeft()" class="eventScroll" id="left-button">&#10094;</a></td>
-            <td class="eventsTableData"><div id="allMyEvents">
+            <td class="eventsTableData">
+              <div id="allMyEvents">
                 <div class="myEvent"></div>
                 <div class="myEvent"></div>
                 <div class="myEvent"></div>
@@ -229,7 +233,7 @@ var events = [];
 <div id="upcomingEvents">
     <table class="eventsTable">
       <tr>
-        <td class="eventsTableArrow"><a href="#" onclick="goLeft()" class="eventScroll" id="left-button">&#10094;</a></td>
+        <td class="eventsTableArrow"><button href="#" class="eventScroll" id="left-button-bottom">&#10094;</button></td>
             <td class="eventsTableData"><div id="content">
                 <img class="thing" id="notesPic0">
                 <img class="thing" id="notesPic1">
@@ -244,7 +248,7 @@ var events = [];
                 <img class="thing" id="notesPic10">
                 <img class="thing" id="notesPic11">
             </div></td>
-        <td class="eventsTableArrow"><a href="#" onclick="goRight()" class="eventScroll" id="right-button">&#10095;</a></td>
+        <td class="eventsTableArrow"><button href="#" class="eventScroll" id="right-button-bottom">&#10095;</button></td>
       </tr>
     </table>
 </div>
