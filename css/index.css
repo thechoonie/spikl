@@ -27,13 +27,13 @@ ul.navbar {
     text-align: right;
 }
 
-li {
+li.navbar {
     display: inline-block;
     padding: 20px;
     font-family: 'Dosis', sans-serif;
 }
 
-li:hover {
+li.navbar:hover {
     background-color: #FF6600;
 }
 
@@ -44,6 +44,14 @@ a.navbar {
 
 a.navbar:hover {
   color: white;
+}
+
+ul {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  margin: 100px 250px 50px 250px;
+  padding: 10px 70px 100px 70px;
+  border-radius: 15px;
 }
 
 a {
