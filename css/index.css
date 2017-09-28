@@ -17,7 +17,7 @@ h1 {
   font-family: 'Quicksand', sans-serif;
 }
 
-ul {
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
